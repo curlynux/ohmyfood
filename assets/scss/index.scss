@@ -1,0 +1,29 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: gold;
+@media only screen and (min-width: 600px)
+{
+  div.wrapper
+  {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  body {
+    
+    #localisation
+    {
+      background-color: rgba(234,234,234,255);
+    }
+  
+    header img
+    {
+  
+    }
+    
+    img
+    {
+      width: 50%;
+      padding: 5%;
+    }
+  }
+}

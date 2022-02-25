@@ -1,0 +1,16 @@
+@media only screen and (min-width: 600px) {
+  div.wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  body #localisation {
+    background-color: #eaeaea;
+  }
+  body img {
+    width: 50%;
+    padding: 5%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

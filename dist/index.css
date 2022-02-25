@@ -1,0 +1,10 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: gold;
+}
+body img {
+  width: 50%;
+}
+body p {
+  border: 3px solid crimson;
+}
