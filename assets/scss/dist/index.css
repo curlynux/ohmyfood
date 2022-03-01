@@ -1,14 +1,142 @@
-@media only screen and (min-width: 600px) {
-  div.wrapper {
-    width: 90%;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300:wght@600&display=swap");
+@media only screen and (max-width: 768px) {
+  * {
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .wrapper {
+    width: 100%;
     margin: 0 auto;
   }
 
-  body #localisation {
-    background-color: #eaeaea;
+  header, section.fonction, div.explore {
+    display: flex;
   }
-  body img {
+
+  header {
+    align-items: center;
+  }
+
+  header img {
     width: 50%;
-    padding: 5%;
+    padding: 4%;
+  }
+
+  #localisation {
+    background-color: #e6e6e6;
+    width: 100%;
+    text-align: center;
+    padding: 4%;
+    font-weight: bold;
+    border-top: #bfbfbf 3px solid;
+  }
+
+  #localisation i {
+    margin-right: 5%;
+  }
+
+  div.explore {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 10%;
+    padding-bottom: 15%;
+  }
+
+  div.explore h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 90%;
+  }
+
+  div.explore p {
+    font-weight: lighter;
+    margin-bottom: 10%;
+  }
+
+  div.explore input {
+    background: linear-gradient(#ce72d6, #8d5ad7);
+    padding: 6%;
+    border-radius: 50px;
+    width: max-content;
+    margin-left: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  div.explore input[value] {
+    color: white;
+  }
+
+  /* ======== ORDERED LIST ======== */
+  section ol {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    counter-reset: li;
+  }
+
+  section ol li::before {
+    list-style: none;
+    content: counter(li);
+    color: white;
+    background-color: #8d5ad7;
+    position: absolute;
+    left: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    border-radius: 50px;
+    counter-increment: li;
+  }
+
+  section ol li {
+    margin: 5%;
+    align-items: center;
+    border-radius: 20px;
+    background: #f4f4f4;
+    width: 80%;
+    padding: 7%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  section ol li:nth-last-child(1) {
+    background-color: #f2ecfe;
+  }
+
+  section ol li i {
+    margin-right: 5%;
+  }
+
+  /* ======== RESTAURANTS ========= */
+  section.resto {
+    margin: 5%;
+  }
+
+  section.resto h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5%;
+  }
+
+  figure, img {
+    border-radius: 25px;
+  }
+
+  figure {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 10%;
+  }
+
+  #palette {
+    position: relative;
+    bottom: 30px;
+  }
+
+  figure div.text {
+    position: relative;
+    background: white;
+    bottom: 70px;
   }
 }

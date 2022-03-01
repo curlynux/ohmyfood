@@ -1,29 +1,168 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: gold;
-@media only screen and (min-width: 600px)
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300:wght@600&display=swap');
+
+@media only screen and (max-width: 768px)
 {
-  div.wrapper
+  *
   {
-    width: 90%;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+  }
+  .wrapper
+  {
+    width: 100%;
     margin: 0 auto;
   }
-  
-  body {
-    
-    #localisation
-    {
-      background-color: rgba(234,234,234,255);
-    }
-  
-    header img
-    {
-  
-    }
-    
-    img
-    {
-      width: 50%;
-      padding: 5%;
-    }
+
+  header, section.fonction, div.explore
+  {
+    display: flex;
+  }
+
+  header
+  {
+    align-items: center;
+  }
+
+  header img
+  {
+    width: 50%;
+    padding: 4%;
+  }
+
+  #localisation
+  {
+    background-color: hsl(0, 0%, 90%);
+    width: 100%;
+    text-align: center;
+    padding: 4%;
+    font-weight: bold;
+    border-top: hsl(0, 0%, 75%) 3px solid;
+  }
+
+  #localisation i
+  {
+    margin-right: 5%;
+  }
+
+  div.explore
+  {
+    background: rgb(244, 244, 244);
+    text-align: center;
+    padding: 10%;
+    padding-bottom: 15%;
+  }
+
+  div.explore h1
+  {
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 90%;
+  }
+
+  div.explore p
+  {
+    font-weight: lighter;
+    margin-bottom: 10%;
+  }
+
+  div.explore input
+  {
+    background: linear-gradient(rgb(206, 114, 214), rgb(141, 90, 215));
+    padding: 6%;
+    border-radius: 50px;
+    width: max-content;
+    margin-left: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  div.explore input[value]
+  {
+    color: white;
+  }
+
+  /* ======== ORDERED LIST ======== */
+
+  section ol
+  {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    counter-reset: li;
+  }
+
+  section ol li::before
+  {
+    list-style: none;
+    content: counter(li);
+    color: white;
+    background-color: rgb(141, 90, 215);
+    position: absolute;
+    left: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    border-radius:50px;
+    counter-increment: li;
+  }
+
+  section ol li
+  {
+    margin: 5%;
+    align-items: center;
+    border-radius: 20px;
+    background: rgb(244, 244, 244);
+    width: 80%;
+    padding: 7%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  section ol li:nth-last-child(1)
+  {
+    background-color: rgb(242, 236, 254);
+  }
+
+  section ol li i
+  {
+    margin-right: 5%;
+  }
+
+  /* ======== RESTAURANTS ========= */
+
+  section.resto
+  {
+    margin: 5%;
+  }
+
+  section.resto h2
+  {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5%;
+  }
+
+  figure, img
+  {
+    border-radius: 25px;
+  }
+
+  figure
+  {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 10%;
+  }
+
+  #palette
+  {
+    position: relative;
+    bottom: 30px;
+  }
+
+  figure div.text
+  {
+    position: relative;
+    background: white;
+    bottom: 70px;
   }
 }

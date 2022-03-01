@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="./assets/scss/reset.css">
     <link rel="stylesheet" href="./assets/scss/normalize.css">
     <link rel="stylesheet" href="./assets/scss/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
 <div class="wrapper">
     <header>
         <img src="./assets/images/logo/ohmyfood.png" alt="ohmyfood">
-        <p id="localisation">localisation</p>
+        <p id="localisation"><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
         <div class="explore">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
@@ -19,48 +20,42 @@
         </div>
     </header>
     <main>
-        <section class="fontion">
-            <ul>
+        <section class="fonction">
+            <ol>
                 <li><i class="fa fa-phone"></i> Choisissez un restaurant</li>
                 <li><i class="fa fa-list"></i> Composez votre menu</li>
                 <li><i class="fa fa-store"></i> Dégustez au restaurant</li>
-            </ul>
+            </ol>
         </section>
         <section class="resto">
             <h2>Restaurants</h2>
-            <div class="quartier">
+                <div class="r">
                 <figure>
-                    <img src="./assets/images/restaurants/palette.jpg" alt="menilmontant"/>
+                    <img id="palette" src="./assets/images/restaurants/palette.jpg" alt="menilmontant"/>
                     <div class="text">
                         <p class="title">La palette du goût</p>
                         <p class="town">Ménilmontant</p>
                         <i class="fa fa-like"></i>
                     </div>
                 </figure>
-            </div>
-            <div class="quartier">
                 <figure>
-                    <img src="./assets/images/restaurants/note.jpg" alt="Charonne"/>
+                    <img id="charonne" src="./assets/images/restaurants/note.jpg" alt="Charonne"/>
                     <div class="text">
                         <p class="title">La note enchantée</p>
                         <p class="town">Charonne</p>
                         <i class="fa fa-like"></i>
                     </div>
                 </figure>
-            </div>
-            <div class="quartier">
                 <figure>
-                    <img src="./assets/images/restaurants/french.jpg" alt="french"/>
+                    <img id="rouge" src="./assets/images/restaurants/french.jpg" alt="french"/>
                     <div class="text">
                         <p class="title">À la française</p>
                         <p class="town">Cité Rouge</p>
                         <i class="fa fa-like"></i>
                     </div>
                 </figure>
-            </div>
-            <div class="quartier">
                 <figure>
-                    <img src="./assets/images/restaurants/delice.jpg" alt="delice"/>
+                    <img id="fm" src="./assets/images/restaurants/delice.jpg" alt="delice"/>
                     <div class="text">
                         <p class="title">Le délice des sens</p>
                         <p class="town">Folie-Méricourt</p>
