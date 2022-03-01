@@ -151,6 +151,8 @@
     overflow: hidden;
     display: flex;
     margin-bottom: 10%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
 
   #palette
@@ -161,8 +163,24 @@
 
   figure div.text
   {
-    position: relative;
+    width: 100%;
+    padding: 5%;
+    top: 67%;
+    position: absolute;
     background: white;
-    bottom: 70px;
+  }
+
+  div.text p:nth-child(1)
+  {
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+
+  div.text i
+  {
+    position: relative;
+    font-size: 1.5em;
+    bottom: 35px;
+    left: 260px;
   }
 }
