@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @media only screen and (max-width: 768px) {
   * {
     flex-direction: column;
@@ -154,5 +155,26 @@
     font-size: 1.5em;
     bottom: 35px;
     left: 260px;
+  }
+
+  footer {
+    display: flex;
+    background: #383838;
+    padding: 5%;
+    color: white;
+  }
+
+  footer img {
+    filter: invert(100%);
+    width: 50%;
+    margin-bottom: 5%;
+  }
+
+  footer p {
+    margin-bottom: 3%;
+  }
+
+  footer i {
+    margin-right: 5%;
   }
 }
