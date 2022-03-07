@@ -1,10 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 * {
   font-family: "Raleway", sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img.resto {
+    transform: translateY(20%);
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+  }
+
+  img.logo {
+    width: 70%;
+    padding: 5%;
+    position: relative;
+    bottom: 20px;
+  }
+
   h4 {
     font-weight: bold;
     font-size: 1.5em;
@@ -23,8 +44,9 @@
   main {
     display: flex;
     flex-direction: column;
-    padding: 10%;
-    background: coral;
+    padding: 3%;
+    margin-top: 200px;
+    background: #f6f6f6;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
   }
@@ -38,6 +60,35 @@
   main section div.menu_item {
     margin-bottom: 5%;
     background: white;
-    border-radius: 30px;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  div.menu_item p:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 2%;
+  }
+
+  div.menu_item p:nth-child(2) {
+    font-size: 0.9em;
+  }
+
+  div.menu_item p:nth-child(3) {
+    font-weight: bold;
+    align-self: flex-end;
+    position: absolute;
+    margin-top: 25px;
+  }
+
+  i.fa-circle-check {
+    display: flex;
+    right: 5px;
+    width: min-content;
+    padding: 21px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #b1e1cf;
   }
 }

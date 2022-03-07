@@ -11,7 +11,8 @@
     margin: 0 auto;
   }
 
-  header, section.fonction, div.explore {
+  header, section.fonction, div.explore 
+  {
     display: flex;
   }
 
