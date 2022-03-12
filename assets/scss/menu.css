@@ -61,35 +61,56 @@
     margin-bottom: 5%;
     background: white;
     border-radius: 15px;
-    padding: 10px;
     display: flex;
+    position: relative;
     flex-direction: column;
+    height: 59px;
+    overflow: hidden;
+    border: 3px solid crimson;
   }
 
   div.menu_item p:nth-child(1) {
     font-weight: bold;
+    margin-top: 2%;
+    margin-left: 4%;
     margin-bottom: 2%;
   }
 
   div.menu_item p:nth-child(2) {
+    margin-left: 4%;
     font-size: 0.9em;
   }
 
   div.menu_item p:nth-child(3) {
     font-weight: bold;
-    align-self: flex-end;
     position: absolute;
+    right: 75px;
     margin-top: 25px;
   }
 
   i.fa-circle-check {
     display: flex;
-    right: 5px;
+    right: -60px;
+    align-self: flex-end;
     width: min-content;
+    position: absolute;
+    overflow: hidden;
     padding: 21px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background: #b1e1cf;
+    animation: slide 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes slide {
+    from {
+      right: 0%;
+    }
+    to {
+      right: 30%;
+    }
   }
 }
 
