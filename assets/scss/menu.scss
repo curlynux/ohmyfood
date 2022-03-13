@@ -117,20 +117,31 @@
 
     div.menu_item:hover > i.fa-circle-check
     {
-        animation: slide 2s alternate;
-        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-        animation-fill-mode: both;
-        animation-play-state: running;
+        animation: slideIn 2s alternate;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
-    @keyframes slide 
+    div.menu_item > i.fa-circle-check
+    {
+        animation: slideOut 2s alternate;
+    }
+
+    @keyframes slideIn 
     {
         0%
         {
             right: -60px;
         }
 
-        50%
+        100%
+        {
+            right: 0px;
+        }
+    }
+
+    @keyframes slideOut 
+    {
+        0%
         {
             right: 0px;
         }
