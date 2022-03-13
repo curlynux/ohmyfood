@@ -99,17 +99,24 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background: #b1e1cf;
-    animation: slide 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+  }
+
+  div.menu_item:hover > i.fa-circle-check {
+    animation: slide 2s alternate;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: both;
+    animation-play-state: running;
   }
 
   @keyframes slide {
-    from {
-      right: 0%;
+    0% {
+      right: -60px;
     }
-    to {
-      right: 30%;
+    50% {
+      right: 0px;
+    }
+    100% {
+      right: -60px;
     }
   }
 }
