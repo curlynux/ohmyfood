@@ -5,11 +5,128 @@
   font-family: "Raleway", sans-serif;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.menu_item {
+  animation: fadein 2s;
+}
+
+div.menu_item:hover > i.fa-circle-check {
+  animation: slideIn 2s alternate;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+div.menu_item > i.fa-circle-check {
+  animation: slideOut 2s alternate;
+}
+
+@keyframes slideIn {
+  0% {
+    right: -60px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -60px;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+div.menu_item p:nth-child(2) {
+  margin-left: 4%;
+  font-size: 0.9em;
+}
+
+div.menu_item p:nth-child(3) {
+  font-weight: bold;
+  position: absolute;
+  right: 75px;
+  margin-top: 25px;
+}
+
+i.fa-circle-check {
+  display: flex;
+  right: -60px;
+  align-self: flex-end;
+  width: min-content;
+  position: absolute;
+  overflow: hidden;
+  padding: 21px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #b1e1cf;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+h4::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  height: 3px;
+  width: 60px;
+  background: crimson;
+  border-bottom: 5px solid springgreen;
+}
+
+main {
+  display: flex;
+  padding: 3%;
+  margin-top: 200px;
+  background: #f6f6f6;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+main section {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+main section div.menu_item {
+  margin-bottom: 5%;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  height: 59px;
+  overflow: hidden;
+  border: 3px solid crimson;
+}
+
+div.menu_item p:nth-child(1) {
+  font-weight: bold;
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-bottom: 2%;
+}
+
 @media only screen and (max-width: 768px) {
-  header {
-    display: flex;
+  main {
     flex-direction: column;
-    align-items: center;
+  }
+
+  main section {
+    flex-direction: column;
   }
 
   img.resto {
@@ -26,105 +143,49 @@
     bottom: 20px;
   }
 
-  h4 {
-    font-weight: bold;
-    font-size: 1.5em;
-  }
-
-  h4::after {
-    content: "";
-    position: absolute;
-    left: 50px;
-    height: 3px;
-    width: 60px;
-    background: crimson;
-    border-bottom: 5px solid springgreen;
-  }
-
-  main {
-    display: flex;
+  main section div.menu_item {
     flex-direction: column;
-    padding: 3%;
-    margin-top: 200px;
-    background: #f6f6f6;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  main {
+    flex-direction: column;
   }
 
   main section {
-    display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
+    width: 40%;
   }
 
-  main section div.menu_item {
-    margin-bottom: 5%;
-    background: white;
-    border-radius: 15px;
+  #all {
     display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 59px;
+  }
+
+  main section:nth-child(2), main section:nth-child(3) {
+    margin-left: 2%;
+  }
+
+  div.wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  header {
+    height: 400px;
     overflow: hidden;
-    border: 3px solid crimson;
   }
 
-  div.menu_item p:nth-child(1) {
-    font-weight: bold;
-    margin-top: 2%;
-    margin-left: 4%;
+  header img.logo {
+    width: 20%;
     margin-bottom: 2%;
   }
 
-  div.menu_item p:nth-child(2) {
-    margin-left: 4%;
-    font-size: 0.9em;
+  header img.resto {
+    position: relative;
   }
 
-  div.menu_item p:nth-child(3) {
-    font-weight: bold;
-    position: absolute;
-    right: 75px;
-    margin-top: 25px;
-  }
-
-  i.fa-circle-check {
-    display: flex;
-    right: -60px;
-    align-self: flex-end;
-    width: min-content;
-    position: absolute;
-    overflow: hidden;
-    padding: 21px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: #b1e1cf;
-  }
-
-  div.menu_item:hover > i.fa-circle-check {
-    animation: slideIn 2s alternate;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-
-  div.menu_item > i.fa-circle-check {
-    animation: slideOut 2s alternate;
-  }
-
-  @keyframes slideIn {
-    0% {
-      right: -60px;
-    }
-    100% {
-      right: 0px;
-    }
-  }
-  @keyframes slideOut {
-    0% {
-      right: 0px;
-    }
-    100% {
-      right: -60px;
-    }
+  div.menu_item {
+    flex-direction: column;
   }
 }
 
