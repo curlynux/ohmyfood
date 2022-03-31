@@ -6,6 +6,8 @@
   font-family: 'Raleway', sans-serif;
 }
 
+
+
 @media only screen and (max-width: 768px)
 {
   *
@@ -35,9 +37,23 @@
 
   body
   {
-    animation: timeout 3s;
-    animation-timing-function: linear;
+    animation: movein 3s;
+    
+  }
 
+  @keyframes movein
+  {
+    0%
+    {
+      position: relative;
+      top: 1000px;
+    }
+
+    100%
+    {
+      position: relative;
+      top: 0px;
+    }
   }
 
   @keyframes timeout
