@@ -29,7 +29,7 @@
   }
 
   body {
-    animation: movein 3s;
+    animation: movein 2s ease-in;
   }
 
   @keyframes movein {
