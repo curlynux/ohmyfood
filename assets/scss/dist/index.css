@@ -29,7 +29,7 @@
   }
 
   body {
-    animation: movein 2s ease-in;
+    animation: timeout 1s ease-in;
   }
 
   @keyframes movein {
@@ -47,9 +47,12 @@
   @keyframes timeout {
     0% {
       opacity: 0;
+      position: relative;
+      top: 2000px;
     }
     100% {
       opacity: 1;
+      top: 0px;
     }
   }
   @keyframes spin {
