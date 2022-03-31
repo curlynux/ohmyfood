@@ -11,10 +11,6 @@ header {
   flex-direction: column;
 }
 
-div.menu_item {
-  animation: fadein 2s;
-}
-
 div.menu_item:hover > i.fa-circle-check {
   animation: slideIn 2s alternate;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -24,6 +20,22 @@ div.menu_item > i.fa-circle-check {
   animation: slideOut 2s alternate;
 }
 
+@keyframes slidetxt {
+  0% {
+    right: 20px;
+  }
+  100% {
+    right: 70px;
+  }
+}
+@keyframes slidetxtout {
+  0% {
+    right: 70px;
+  }
+  100% {
+    right: 20px;
+  }
+}
 @keyframes slideIn {
   0% {
     right: -60px;
@@ -56,8 +68,13 @@ div.menu_item p:nth-child(2) {
 div.menu_item p:nth-child(3) {
   font-weight: bold;
   position: absolute;
-  right: 75px;
+  right: 20px;
   margin-top: 25px;
+  animation: slidetxtout 2s cubic-bezier(0, 0.34, 0.33, 0.99);
+}
+
+div.menu_item:hover > p:nth-child(3) {
+  animation: slidetxt 2s cubic-bezier(0, 0.34, 0.33, 0.99);
 }
 
 i.fa-circle-check {

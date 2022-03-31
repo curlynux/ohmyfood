@@ -19,6 +19,53 @@
     margin: 0 auto;
   }
 
+  #loader
+  {
+    height: 100px;
+    width: 100px;
+    border: 15px solid black;
+    border-top: 15px solid crimson;
+    position:absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 35%;
+    z-index: 1;
+    animation: spin 1300ms linear infinite;
+  }
+
+  body
+  {
+    animation: timeout 3s;
+    animation-timing-function: linear;
+    display: none;
+
+  }
+
+  @keyframes timeout
+  {
+    0%
+    {
+      opacity: 0;
+    }
+
+    100%
+    {
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin
+  {
+    0% 
+    {
+      transform: rotate(0deg);
+    }
+    100% 
+    {
+      transform: rotate(360deg);
+    }
+  }
+
   header, section.fonction, div.explore
   {
     display: flex;
