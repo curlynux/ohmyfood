@@ -83,11 +83,19 @@ header
     {
         0%
         {
+            position: relative;
+            top: 500px;
+        }
+
+        50%
+        {
             opacity: 0;
         }
 
         100%
         {
+            position: relative;
+            top: 0px;
             opacity: 1;
         }
     }
@@ -157,6 +165,7 @@ header
     {
         display: flex;
         margin-bottom: 5%;
+        animation: fadein 2s normal;
     }
 
     main section div.menu_item
