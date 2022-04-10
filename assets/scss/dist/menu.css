@@ -20,6 +20,12 @@ div.menu_item > i.fa-circle-check {
   animation: slideOut 2s alternate;
 }
 
+div.menu_item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @keyframes slidetxt {
   0% {
     right: 20px;
@@ -33,7 +39,7 @@ div.menu_item > i.fa-circle-check {
     right: 70px;
   }
   100% {
-    right: 20px;
+    right: 5px;
   }
 }
 @keyframes slideIn {
@@ -72,15 +78,22 @@ div.menu_item p:nth-child(2) {
 }
 
 div.menu_item p:nth-child(3) {
-  font-weight: bold;
   position: absolute;
-  right: 20px;
-  margin-top: 25px;
-  animation: slidetxtout 2s cubic-bezier(0, 0.34, 0.33, 0.99);
+  bottom: 15px;
+  right: 5px;
+  font-weight: bold;
+  animation: slidetxtout 2s;
 }
 
 div.menu_item:hover > p:nth-child(3) {
-  animation: slidetxt 2s cubic-bezier(0, 0.34, 0.33, 0.99);
+  animation: slidetxt 2s;
+}
+
+div.menu_item p:nth-child(1) {
+  font-weight: bold;
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-bottom: 2%;
 }
 
 i.fa-circle-check {
@@ -113,17 +126,20 @@ h4::after {
 
 main {
   display: flex;
+  position: relative;
   padding: 3%;
-  margin-top: 200px;
   background: #f6f6f6;
   border-top-left-radius: 30px;
+  flex-direction: column;
   border-top-right-radius: 30px;
 }
 
 main section {
   display: flex;
+  flex-direction: column;
   margin-bottom: 5%;
   animation: fadein 2s normal;
+  max-width: 300px;
 }
 
 main section div.menu_item {
@@ -134,23 +150,23 @@ main section div.menu_item {
   position: relative;
   height: 59px;
   overflow: hidden;
-  border: 3px solid crimson;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-div.menu_item p:nth-child(1) {
-  font-weight: bold;
-  margin-top: 2%;
-  margin-left: 4%;
-  margin-bottom: 2%;
+div.menu_item p:nth-child(1):hover,
+div.menu_item p:nth-child(2):hover {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 3px solid darkblue;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   main {
     flex-direction: column;
-  }
-
-  main section {
-    flex-direction: column;
+    bottom: 100px;
   }
 
   img.resto {
@@ -171,9 +187,43 @@ div.menu_item p:nth-child(1) {
     flex-direction: column;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  header img.logo {
+    padding: 3%;
+    width: 40%;
+  }
+
+  main {
+    bottom: 100px;
+  }
+
+  div#all {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main section:nth-child(1) {
+    margin-right: 4%;
+  }
+
+  main section {
+    width: 45%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  div.menu_item {
+    flex-direction: column;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
 @media only screen and (min-width: 992px) {
   main {
     flex-direction: column;
+    bottom: 50px;
   }
 
   main section {
@@ -195,13 +245,13 @@ div.menu_item p:nth-child(1) {
   }
 
   header {
-    height: 400px;
+    height: 500px;
     overflow: hidden;
   }
 
   header img.logo {
     width: 20%;
-    margin-bottom: 2%;
+    padding: 1%;
   }
 
   header img.resto {
