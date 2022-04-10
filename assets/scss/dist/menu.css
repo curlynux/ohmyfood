@@ -160,6 +160,8 @@ div.menu_item p:nth-child(2):hover {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 60%;
+  transition: 1s;
   border: 3px solid darkblue;
 }
 
