@@ -206,9 +206,9 @@ div.menu_item p:nth-child(2):hover
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 60%;
+    width: 70%;
+    transition: width 3s ease-in;
     transition: 1s;
-    border: 3px solid darkblue;
 }
 
 @media only screen and (max-width: 767px)
