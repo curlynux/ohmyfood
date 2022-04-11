@@ -35,12 +35,12 @@ div.menu_item p:nth-child(3)
     bottom: 15px;
     right: 5px;
     font-weight: bold;
-    animation: slidetxtout 2s;
+    animation: slidetxtout 2s cubic-bezier(0,.71,.27,1);
 }
 
 div.menu_item:hover > p:nth-child(3)
 {
-    animation: slidetxt 2s;    
+    animation: slidetxt 2s cubic-bezier(0,.71,.27,1);
 }
 
 div.menu_item p:nth-child(1)
