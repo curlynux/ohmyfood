@@ -11,67 +11,12 @@ header {
   flex-direction: column;
 }
 
-div.menu_item:hover > i.fa-circle-check {
-  animation: slideIn 2s alternate;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-div.menu_item > i.fa-circle-check {
-  animation: slideOut 2s alternate;
-}
-
 div.menu_item p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-@keyframes slidetxt {
-  0% {
-    right: 20px;
-  }
-  100% {
-    right: 70px;
-  }
-}
-@keyframes slidetxtout {
-  0% {
-    right: 70px;
-  }
-  100% {
-    right: 5px;
-  }
-}
-@keyframes slideIn {
-  0% {
-    right: -60px;
-  }
-  100% {
-    right: 0px;
-  }
-}
-@keyframes slideOut {
-  0% {
-    right: 0px;
-  }
-  100% {
-    right: -60px;
-  }
-}
-@keyframes fadein {
-  0% {
-    position: relative;
-    top: 500px;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    top: 0px;
-    opacity: 1;
-  }
-}
 div.menu_item p:nth-child(2) {
   margin-left: 4%;
   font-size: 0.9em;
@@ -96,17 +41,34 @@ div.menu_item p:nth-child(1) {
   margin-bottom: 2%;
 }
 
+div.menu_item span {
+  position: absolute;
+  right: -60px;
+  width: 58px;
+  background: #b1e1cf;
+  height: 58px;
+  animation: slideOut 2s normal cubic-bezier(0, 0.71, 0.27, 1);
+}
+
+div.menu_item:hover span {
+  animation: slideIn 2s normal cubic-bezier(0, 0.71, 0.27, 1);
+}
+
+div.menu_item:hover i.fa-circle-check {
+  animation: rotate_out 1s normal linear;
+}
+
 i.fa-circle-check {
   display: flex;
-  right: -60px;
   align-self: flex-end;
   width: min-content;
   position: absolute;
   overflow: hidden;
   padding: 21px;
+  transform: rotate(360deg);
   border-top-right-radius: 10px;
+  animation: rotate_in 1s normal linear;
   border-bottom-right-radius: 10px;
-  background: #b1e1cf;
 }
 
 h4 {
@@ -132,6 +94,7 @@ main {
   border-top-left-radius: 30px;
   flex-direction: column;
   border-top-right-radius: 30px;
+  animation: scale_out 600ms normal;
 }
 
 main section {
@@ -155,14 +118,12 @@ main section div.menu_item {
   white-space: nowrap;
 }
 
-div.menu_item p:nth-child(1):hover,
-div.menu_item p:nth-child(2):hover {
+div.menu_item:hover p:nth-child(1),
+div.menu_item:hover p:nth-child(2) {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  width: 70%;
-  transition: width 3s ease-in;
-  transition: 1s;
+  width: 60%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -220,6 +181,7 @@ div.menu_item p:nth-child(2):hover {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    transition: 1s ease-in;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -262,5 +224,75 @@ div.menu_item p:nth-child(2):hover {
 
   div.menu_item {
     flex-direction: column;
+  }
+}
+@keyframes slidetxt {
+  0% {
+    right: 20px;
+  }
+  100% {
+    right: 70px;
+  }
+}
+@keyframes slidetxtout {
+  0% {
+    right: 70px;
+  }
+  100% {
+    right: 5px;
+  }
+}
+@keyframes rotate_in {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate_out {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes scale_out {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideIn {
+  0% {
+    right: -60px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -60px;
+  }
+}
+@keyframes fadein {
+  0% {
+    position: relative;
+    top: 500px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
   }
 }
