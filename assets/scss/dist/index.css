@@ -55,7 +55,7 @@ header {
     opacity: 1;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   header img {
     width: 20%;
     padding: 2%;
@@ -117,19 +117,6 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 2%;
-  }
-
-  section ol li::before {
-    list-style: none;
-    content: counter(li);
-    color: white;
-    background-color: #8d5ad7;
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    padding: 3px;
-    border-radius: 50px;
-    counter-increment: li;
   }
 
   section ol li:nth-child(1)::before {
