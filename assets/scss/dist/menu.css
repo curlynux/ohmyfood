@@ -140,21 +140,6 @@ div.menu_item:hover p:nth-child(2) {
   width: 60%;
 }
 
-footer {
-  display: flex;
-  background: #383838;
-  color: white;
-  justify-content: space-evenly;
-  flex-direction: column;
-  padding-left: 10%;
-  height: 200px;
-}
-
-footer img {
-  filter: invert(100%);
-  width: 20%;
-}
-
 @media only screen and (max-width: 767px) {
   main {
     flex-direction: column;
@@ -164,11 +149,16 @@ footer img {
   h4::after {
     content: "";
     position: absolute;
-    left: 50px;
+    left: 30px;
+    bottom: 20px;
     height: 3px;
     width: 60px;
     background: crimson;
     border-bottom: 5px solid springgreen;
+  }
+
+  h4:nth-child(2)::after {
+    bottom: 60px;
   }
 
   img.logo {
@@ -178,6 +168,25 @@ footer img {
 
   main section div.menu_item {
     flex-direction: column;
+  }
+
+  main input {
+    padding: 20px;
+  }
+
+  footer {
+    display: flex;
+    background: #383838;
+    color: white;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 10%;
+    height: 200px;
+  }
+
+  footer img {
+    filter: invert(100%);
+    width: 50%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -254,6 +263,21 @@ footer img {
 
   div.menu_item {
     flex-direction: column;
+  }
+
+  footer {
+    display: flex;
+    background: #383838;
+    color: white;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-left: 10%;
+    height: 200px;
+  }
+
+  footer img {
+    filter: invert(100%);
+    width: 20%;
   }
 }
 @keyframes slidetxt {

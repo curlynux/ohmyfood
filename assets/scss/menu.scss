@@ -162,23 +162,6 @@ div.menu_item:hover p:nth-child(2)
     width: 60%;
 }
 
-footer
-  {
-    display: flex;
-    background: rgb(56, 56, 56);
-    color: white;
-    justify-content: space-evenly;
-    flex-direction: column;
-    padding-left: 10%;
-    height: 200px;
-  }
-  
-  footer img
-  {
-    filter: invert(100%);
-    width: 20%;
-  }
-
 @media only screen and (max-width: 767px)
 {
     main
@@ -191,11 +174,17 @@ footer
     {
         content: "";
         position: absolute;
-        left: 50px;
+        left: 30px;
+        bottom: 20px;
         height: 3px;
         width: 60px;
         background: crimson;
         border-bottom: 5px solid springgreen;
+    }
+
+    h4:nth-child(2)::after
+    {
+        bottom: 60px;
     }
 
     img.logo
@@ -207,6 +196,28 @@ footer
     main section div.menu_item
     {
         flex-direction: column;
+    }
+
+    main input
+    {
+        padding: 20px;
+    }
+
+    footer
+    {
+        display: flex;
+        background: rgb(56, 56, 56);
+        color: white;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-left: 10%;
+        height: 200px;
+    }
+      
+    footer img
+    {
+        filter: invert(100%);
+        width: 50%;
     }
 }
 
@@ -308,6 +319,23 @@ and (max-width: 992px)
     div.menu_item
     {
         flex-direction: column;
+    }
+
+    footer
+    {
+        display: flex;
+        background: rgb(56, 56, 56);
+        color: white;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-left: 10%;
+        height: 200px;
+    }
+      
+    footer img
+    {
+        filter: invert(100%);
+        width: 20%;
     }
 }
 
