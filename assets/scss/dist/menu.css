@@ -11,6 +11,13 @@ header {
   flex-direction: column;
 }
 
+.fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 2em;
+}
+
 main input {
   background: linear-gradient(#ce72d6, #8d5ad7);
   border-radius: 50px;
@@ -50,6 +57,7 @@ div.menu_item:hover > p:nth-child(3) {
 
 div.menu_item p:nth-child(1) {
   font-weight: bold;
+  font-style: italic;
   margin-top: 2%;
   margin-left: 4%;
   margin-bottom: 2%;
@@ -89,6 +97,7 @@ i.fa-circle-check {
 h4 {
   font-weight: bold;
   font-size: 1.5em;
+  margin-bottom: 2%;
 }
 
 main {

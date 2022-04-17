@@ -16,8 +16,16 @@ header
     flex-direction: column;
 }
 
+.fa-arrow-left
+{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 2em;
+}
+
 main input
-  {
+{
     background: linear-gradient(rgb(206, 114, 214), rgb(141, 90, 215));
     border-radius: 50px;
     width: max-content;
@@ -25,12 +33,12 @@ main input
     padding: 1.5%;
     align-self: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  }
+}
   
- main input[value]
-  {
+main input[value]
+{
     color: white;
-  }
+}
 
 div.menu_item p
 {
@@ -62,6 +70,7 @@ div.menu_item:hover > p:nth-child(3)
 div.menu_item p:nth-child(1)
 {
     font-weight: bold;
+    font-style: italic;
     margin-top: 2%;
     margin-left: 4%;
     margin-bottom: 2%;
@@ -80,7 +89,6 @@ div.menu_item span
 div.menu_item:hover span
 {
     animation: slideIn 2s normal cubic-bezier(0,.71,.27,1);
-    
 }
 
 div.menu_item:hover i.fa-circle-check
@@ -107,6 +115,7 @@ h4
 {
     font-weight: bold;
     font-size: 1.5em;
+    margin-bottom: 2%;
 }
 
 main
