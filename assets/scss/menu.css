@@ -11,6 +11,20 @@ header {
   flex-direction: column;
 }
 
+main input {
+  background: linear-gradient(#ce72d6, #8d5ad7);
+  border-radius: 50px;
+  width: max-content;
+  display: flex;
+  padding: 1.5%;
+  align-self: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+main input[value] {
+  color: white;
+}
+
 div.menu_item p {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -65,6 +79,7 @@ i.fa-circle-check {
   position: absolute;
   overflow: hidden;
   padding: 21px;
+  color: #FFFF;
   transform: rotate(360deg);
   border-top-right-radius: 10px;
   animation: rotate_in 1s normal linear;
@@ -74,16 +89,6 @@ i.fa-circle-check {
 h4 {
   font-weight: bold;
   font-size: 1.5em;
-}
-
-h4::after {
-  content: "";
-  position: absolute;
-  left: 50px;
-  height: 3px;
-  width: 60px;
-  background: crimson;
-  border-bottom: 5px solid springgreen;
 }
 
 main {
@@ -102,7 +107,7 @@ main section {
   flex-direction: column;
   margin-bottom: 5%;
   animation: fadein 2s normal;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 main section div.menu_item {
@@ -126,10 +131,35 @@ div.menu_item:hover p:nth-child(2) {
   width: 60%;
 }
 
+footer {
+  display: flex;
+  background: #383838;
+  color: white;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding-left: 10%;
+  height: 200px;
+}
+
+footer img {
+  filter: invert(100%);
+  width: 20%;
+}
+
 @media only screen and (max-width: 767px) {
   main {
     flex-direction: column;
     bottom: 100px;
+  }
+
+  h4::after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    height: 3px;
+    width: 60px;
+    background: crimson;
+    border-bottom: 5px solid springgreen;
   }
 
   img.logo {
