@@ -57,8 +57,8 @@ header
 
 @keyframes fade
 {
-from {position: relative; top: 2000px; opacity: 0; }
-to {position: relative; top: 0px; opacity: 1; }
+  from {position: relative; top: 2000px; opacity: 0; }
+  to {position: relative; top: 0px; opacity: 1; }
 }
 
 figure:hover
@@ -76,6 +76,57 @@ figure:not(:hover)
 .fa-store
 {
   color: rgb(141, 90, 215);
+}
+
+// div.heart
+// {
+//   display: flex;
+//   position: absolute;
+//   height: 24px;
+//   width: 24px;
+//   bottom: 35px;
+//   left: 460px;
+//   border: 3px solid darkblue;
+// }
+
+// div.heart:hover i.fa-solid
+// {
+//   display: block;
+// }
+
+// div.heart a:active i.fa-solid
+// {
+//   display: block;
+// }
+
+// div.heart i.fa-solid
+// {
+//   display: block;
+//   background-image: linear-gradient(red, yellow);
+//   background-clip: text;
+// }
+
+// div.heart i
+// {
+//   position: absolute;
+// }
+
+i.fa-regular
+{
+  position: absolute;
+  left: 70vmin;
+  top:2vmin;
+  font-size: 1.6em;
+  z-index: 100;
+  cursor: pointer;
+  font-weight: 100;
+}   
+i.fa-regular:hover::before, i.fa-regular:active::before{
+  transition: 400ms;
+  -webkit-background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(rgb(246, 147, 255), rgb(83, 3, 204));
+  -webkit-text-fill-color: transparent;
 }
 
 div.explore input:hover
@@ -263,8 +314,6 @@ div.explore input:hover
   {
     position: absolute;
     font-size: 1.5em;
-    bottom: 35px;
-    left: 460px;
   }
   
   div.text i.fa-solid:hover

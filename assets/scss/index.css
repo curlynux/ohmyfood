@@ -69,6 +69,24 @@ figure:not(:hover) {
   color: #8d5ad7;
 }
 
+i.fa-regular {
+  position: absolute;
+  left: 70vmin;
+  top: 2vmin;
+  font-size: 1.6em;
+  z-index: 100;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+i.fa-regular:hover::before, i.fa-regular:active::before {
+  transition: 400ms;
+  -webkit-background-clip: text;
+  font-weight: 900;
+  background-image: linear-gradient(#f693ff, #5303cc);
+  -webkit-text-fill-color: transparent;
+}
+
 div.explore input:hover {
   background: linear-gradient(#f693ff, #5303cc);
   transform: scale(1.2);
@@ -226,8 +244,6 @@ div.explore input:hover {
   div.text i {
     position: absolute;
     font-size: 1.5em;
-    bottom: 35px;
-    left: 460px;
   }
 
   div.text i.fa-solid:hover {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/scss/reset.css">
     <link rel="stylesheet" href="./assets/scss/normalize.css">
     <link rel="stylesheet" href="./assets/scss/index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
@@ -41,10 +42,7 @@
                         <p class="title">La palette du goût</p>
                         <p class="town">Ménilmontant</p>
                     </a>
-                        <div class="heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart" style="display: none;"></i>
-                        </div>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
                     </div>
                 </figure>
                 <figure>
@@ -56,11 +54,9 @@
                             <p class="title">La note enchantée</p>
                             <p class="town">Charonne</p>
                         </a>
-                        <div class="heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart" style="display: none;"></i>
-                        </div>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
                     </div>
+                        
                 </figure>
                 <figure>
                     <a href="./a_la_francaise.html">
@@ -71,10 +67,7 @@
                             <p class="title">À la française</p>
                             <p class="town">Cité Rouge</p>
                         </a>
-                        <div class="heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart" style="display: none;"></i>
-                        </div>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </figure>
                 <figure>
@@ -86,10 +79,7 @@
                             <p class="title">Le délice des sens</p>
                             <p class="town">Folie-Méricourt</p>
                         </a>
-                        <div class="heart">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart" style="display: none;"></i>
-                        </div>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </figure>
             </div>
@@ -105,7 +95,7 @@
     <p>Contant</p>
 </footer>
 <script>
-    let timeout = () => setTimeout(display, 3000);
+    let timeout = () => setTimeout(display, 0200);
     let display = () => 
     {
         document.getElementsByClassName("sh")[0].style.display = "flex";
