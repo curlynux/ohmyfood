@@ -121,7 +121,8 @@ i.fa-regular
   cursor: pointer;
   font-weight: 100;
 }   
-i.fa-regular:hover::before, i.fa-regular:active::before{
+
+i.fa-regular:hover::before, i.fa-regular:active{
   transition: 400ms;
   -webkit-background-clip: text;
   font-weight: 900;
