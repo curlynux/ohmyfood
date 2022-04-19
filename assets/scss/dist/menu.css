@@ -140,6 +140,10 @@ div.menu_item:hover p:nth-child(2) {
   width: 60%;
 }
 
+div.heart {
+  display: flex;
+}
+
 @media only screen and (max-width: 767px) {
   main {
     flex-direction: column;
