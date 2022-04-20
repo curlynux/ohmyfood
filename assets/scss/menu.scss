@@ -109,13 +109,27 @@ i.fa-circle-check
     border-top-right-radius: 10px;
     animation: rotate_in 1s normal linear;
     border-bottom-right-radius: 10px;
+    cursor: pointer;
 }
 
 h4
 {
+    position: relative;
     font-weight: bold;
     font-size: 1.5em;
     margin-bottom: 2%;
+}
+
+h4::after
+{
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 30px;
+    height: 3px;
+    width: 60px;
+    background: crimson;
+    border-bottom: 5px solid springgreen;
 }
 
 main
@@ -174,10 +188,11 @@ i.fa-regular:hover::before, i.fa-regular:active
 i.fa-regular
 {
     position: absolute;
-    font-size: 1.6em;
-    z-index: 100;
+    font-size: 1.5em;
     cursor: pointer;
     font-weight: 100;
+    top: 70px;
+    left: 400px;
 }
 
 @media only screen and (max-width: 767px)
@@ -186,18 +201,6 @@ i.fa-regular
     {
         flex-direction: column;
         bottom: 100px;
-    }
-
-    h4::after
-    {
-        content: "";
-        position: absolute;
-        left: 30px;
-        bottom: 20px;
-        height: 3px;
-        width: 60px;
-        background: crimson;
-        border-bottom: 5px solid springgreen;
     }
 
     .fa-arrow-left
@@ -215,6 +218,11 @@ i.fa-regular
     {
         width: 40%;
         padding: 3%;
+    }
+
+    h4
+    {
+        margin-bottom: 20px;
     }
 
     div.heart i
@@ -294,6 +302,12 @@ and (max-width: 992px)
         overflow: hidden;
         white-space: nowrap;
         transition: 1s ease-in;
+    }
+
+    .fa-heart
+    {
+        left: 330px;
+        top: 50px;
     }
 }
 
