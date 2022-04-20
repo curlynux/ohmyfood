@@ -13,7 +13,7 @@
   margin: 0 auto;
 }
 
-header, section.fonction, div.explore
+header, div.fonction, div.explore
 {
   display: flex;
 }
@@ -167,7 +167,7 @@ div.explore input:hover
   
   /* ======== ORDERED LIST ======== */
   
-  section ol
+  div ol
   {
     display: flex;
     text-align: center;
@@ -180,22 +180,22 @@ div.explore input:hover
     margin-top: 2%;
   }
   
-  section ol li:nth-child(1)::before
+  div ol li:nth-child(1)::before
   {
     left: 135px;
   }
   
-  section ol li:nth-child(2)::before
+  div ol li:nth-child(2)::before
   {
     left: 565px;
   }
   
-  section ol li:nth-child(3)::before
+  div ol li:nth-child(3)::before
   {
     left: 1000px;
   }
   
-  section ol li
+  div ol li
   {
     align-items: center;
     border-radius: 20px;
@@ -205,12 +205,12 @@ div.explore input:hover
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   
-  section ol li:nth-last-child(1)
+  div ol li:nth-last-child(1)
   {
     background-color: rgb(242, 236, 254);
   }
   
-  section ol li i
+  div ol li i
   {
     margin-right: 5%;
   }
@@ -226,7 +226,7 @@ div.explore input:hover
     max-width: 1300px;
   }
   
-  section.resto
+  div.resto
   {
     margin: 5%;
     display: flex;
@@ -234,7 +234,7 @@ div.explore input:hover
     align-self: center;
   }
   
-  section.resto h2
+  div.resto h2
   {
     font-weight: bold;
     font-size: 2em;
@@ -360,7 +360,7 @@ div.explore input:hover
   
   /* ======== ORDERED LIST ======== */
   
-  section ol
+  div ol
   {
     display: flex;
     text-align: center;
@@ -368,7 +368,7 @@ div.explore input:hover
     counter-reset: li;
   }
   
-  section ol li::before
+  div ol li::before
   {
     list-style: none;
     content: counter(li);
@@ -383,7 +383,7 @@ div.explore input:hover
     counter-increment: li;
   }
   
-  section ol li
+  div ol li
   {
     margin: 5%;
     align-items: center;
@@ -394,24 +394,24 @@ div.explore input:hover
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   
-  section ol li:nth-last-child(1)
+  div ol li:nth-last-child(1)
   {
     background-color: rgb(242, 236, 254);
   }
   
-  section ol li i
+  div ol li i
   {
     margin-right: 5%;
   }
   
   /* ======== RESTAURANTS ========= */
   
-  section.resto
+  div.resto
   {
     margin: 5%;
   }
   
-  section.resto h2
+  div.resto h2
   {
     font-weight: bold;
     font-size: 1.5em;
