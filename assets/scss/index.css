@@ -71,15 +71,15 @@ figure:not(:hover) {
 
 i.fa-regular {
   position: absolute;
-  left: 70vmin;
-  top: 2vmin;
-  font-size: 1.6em;
-  z-index: 100;
+  bottom: 35px;
+  left: 460px;
+  top: 15px;
+  font-size: 1.5em;
   cursor: pointer;
   font-weight: 100;
 }
 
-i.fa-regular:hover::before, i.fa-regular:active::before {
+i.fa-regular:hover::before, i.fa-regular:active {
   transition: 400ms;
   -webkit-background-clip: text;
   font-weight: 900;
@@ -241,15 +241,6 @@ div.explore input:hover {
     margin-bottom: 3px;
   }
 
-  div.text i {
-    position: absolute;
-    font-size: 1.5em;
-  }
-
-  div.text i.fa-solid:hover {
-    display: block;
-  }
-
   footer {
     display: flex;
     background: #383838;
@@ -397,7 +388,7 @@ div.explore input:hover {
   }
 
   div.text i {
-    position: relative;
+    position: absolute;
     font-size: 1.5em;
     bottom: 35px;
     left: 260px;

@@ -78,46 +78,13 @@ figure:not(:hover)
   color: rgb(141, 90, 215);
 }
 
-// div.heart
-// {
-//   display: flex;
-//   position: absolute;
-//   height: 24px;
-//   width: 24px;
-//   bottom: 35px;
-//   left: 460px;
-//   border: 3px solid darkblue;
-// }
-
-// div.heart:hover i.fa-solid
-// {
-//   display: block;
-// }
-
-// div.heart a:active i.fa-solid
-// {
-//   display: block;
-// }
-
-// div.heart i.fa-solid
-// {
-//   display: block;
-//   background-image: linear-gradient(red, yellow);
-//   background-clip: text;
-// }
-
-// div.heart i
-// {
-//   position: absolute;
-// }
-
 i.fa-regular
 {
   position: absolute;
-  left: 70vmin;
-  top:2vmin;
-  font-size: 1.6em;
-  z-index: 100;
+  bottom: 35px;
+  left: 460px;
+  top: 15px;
+  font-size: 1.5em;
   cursor: pointer;
   font-weight: 100;
 }   
@@ -310,16 +277,9 @@ div.explore input:hover
     font-weight: bold;
     margin-bottom: 3px;
   }
-  
-  div.text i
+
+  div.text i.fa-heart
   {
-    position: absolute;
-    font-size: 1.5em;
-  }
-  
-  div.text i.fa-solid:hover
-  {
-    display: block;
   }
   
   footer
@@ -496,7 +456,7 @@ div.explore input:hover
   
   div.text i
   {
-    position: relative;
+    position: absolute;
     font-size: 1.5em;
     bottom: 35px;
     left: 260px;

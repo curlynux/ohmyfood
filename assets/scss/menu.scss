@@ -162,12 +162,22 @@ div.menu_item:hover p:nth-child(2)
     width: 60%;
 }
 
-div.heart
+i.fa-regular:hover::before, i.fa-regular:active
 {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    float: right;
+    transition: 400ms;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    background-image: linear-gradient(rgb(246, 147, 255), rgb(83, 3, 204));
+    -webkit-text-fill-color: transparent;
+}
+
+i.fa-regular
+{
+    position: absolute;
+    font-size: 1.6em;
+    z-index: 100;
+    cursor: pointer;
+    font-weight: 100;
 }
 
 @media only screen and (max-width: 767px)
@@ -190,6 +200,12 @@ div.heart
         border-bottom: 5px solid springgreen;
     }
 
+    .fa-arrow-left
+    {
+        font-size: 1.5em;
+        top: 10px;
+    }
+
     h4:nth-child(2)::after
     {
         bottom: 60px;
@@ -199,6 +215,12 @@ div.heart
     {
         width: 40%;
         padding: 3%;
+    }
+
+    div.heart i
+    {
+        left:40vh;
+        top: 5vh;
     }
 
     main section div.menu_item
@@ -322,6 +344,12 @@ and (max-width: 992px)
     header img.resto
     {
         position: relative;
+    }
+
+    div.heart i
+    {
+        left: 50vmin;
+        top:12vmin;
     }
 
     div.menu_item
