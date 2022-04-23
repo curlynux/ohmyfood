@@ -93,6 +93,16 @@ div.explore input:hover {
   transition: 400ms;
 }
 
+figure span {
+  background-color: lightgreen;
+  border: 3px solid darkgreen;
+  padding: 5px;
+  top: 10px;
+  position: absolute;
+  z-index: 1;
+  left: 245px;
+}
+
 @media only screen and (min-width: 768px) {
   header img {
     width: 20%;
@@ -221,6 +231,10 @@ div.explore input:hover {
     width: 518px;
     margin-bottom: 5%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  figure span {
+    left: 420px;
   }
 
   #palette {

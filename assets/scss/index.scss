@@ -89,7 +89,8 @@ i.fa-regular
   font-weight: 100;
 }   
 
-i.fa-regular:hover::before, i.fa-regular:active{
+i.fa-regular:hover::before, i.fa-regular:active
+{
   transition: 400ms;
   -webkit-background-clip: text;
   font-weight: 900;
@@ -102,6 +103,17 @@ div.explore input:hover
   background: linear-gradient(rgb(246, 147, 255), rgb(83, 3, 204));
   transform: scale(1.2);
   transition: 400ms;
+}
+
+figure span
+{
+  background-color: lightgreen;
+  border: 3px solid darkgreen;
+  padding: 5px;
+  top: 10px;
+  position: absolute;
+  z-index: 1;
+  left: 245px;
 }
 
 @media only screen and (min-width: 768px)
@@ -256,6 +268,11 @@ div.explore input:hover
     margin-bottom: 5%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
+
+  figure span
+  {
+    left: 420px;
+  }
   
   #palette
   {
@@ -276,10 +293,6 @@ div.explore input:hover
   {
     font-weight: bold;
     margin-bottom: 3px;
-  }
-
-  div.text i.fa-heart
-  {
   }
   
   footer
@@ -336,7 +349,7 @@ div.explore input:hover
     font-size: 1.5em;
     width: 90%;
   }
-  
+
   div.explore p
   {
     font-weight: lighter;

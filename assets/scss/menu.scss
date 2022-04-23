@@ -40,6 +40,12 @@ main input[value]
     color: white;
 }
 
+main h1
+{
+    font-style: italic;
+    font-weight: bold;
+}
+
 div.menu_item p
 {
     text-overflow: ellipsis;
@@ -70,7 +76,6 @@ div.menu_item:hover > p:nth-child(3)
 div.menu_item p:nth-child(1)
 {
     font-weight: bold;
-    font-style: italic;
     margin-top: 2%;
     margin-left: 4%;
     margin-bottom: 2%;
@@ -94,6 +99,13 @@ div.menu_item:hover span
 div.menu_item:hover i.fa-circle-check
 {
     animation: rotate_out 1s normal linear;
+}
+
+#order:hover
+{
+  background: linear-gradient(rgb(246, 147, 255), rgb(83, 3, 204));
+  transform: scale(1.2);
+  transition: 400ms;
 }
 
 i.fa-circle-check
@@ -130,7 +142,8 @@ h4::after
     height: 3px;
     width: 60px;
     background: crimson;
-    border-bottom: 5px solid springgreen;
+    border-bottom: 5px solid;
+    border-color: rgb(176, 225, 207);
 }
 
 main
@@ -208,6 +221,7 @@ input#order
     margin: 0 auto;
     position: relative;
     bottom: 25px;
+    cursor: pointer;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 
