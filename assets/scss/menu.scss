@@ -164,7 +164,7 @@ main section
     flex-direction: column;
     margin-bottom: 5%;
     animation: fadein 2s normal;
-    max-width: 350px;
+    max-width: 634px;
 }
 
 main section div.menu_item
@@ -360,12 +360,15 @@ and (max-width: 992px)
     main section
     {
         flex-direction: column;
-        width: 40%;
+        width: 634px;
+
     }
 
     #all
     {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     main section:nth-child(2), main section:nth-child(3)
@@ -412,16 +415,27 @@ and (max-width: 992px)
         display: flex;
         background: rgb(56, 56, 56);
         color: white;
-        justify-content: space-evenly;
-        flex-direction: column;
+        align-items: flex-end;
+        flex-direction: row-reverse;
         padding-left: 10%;
         height: 200px;
+        gap: 50px;
+        padding-bottom: 40px;
+
+    }
+
+    footer * {
+        display: flex;
+        
+
     }
       
     footer img
     {
         filter: invert(100%);
-        width: 20%;
+        width: 10%;
+        height: 30px;
+        margin-right: 40px;
     }
 }
 

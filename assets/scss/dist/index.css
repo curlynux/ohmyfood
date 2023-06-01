@@ -5,6 +5,20 @@
   flex-direction: column;
 }
 
+div ol li::before {
+  list-style: none;
+  content: counter(li);
+  color: white;
+  background-color: #8d5ad7;
+  position: absolute;
+  left: 30px;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  border-radius: 50px;
+  counter-increment: li;
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -106,7 +120,8 @@ figure span {
 @media only screen and (min-width: 768px) {
   header img {
     width: 20%;
-    padding: 2%;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   #localisation {
@@ -325,20 +340,6 @@ figure span {
     text-align: center;
     align-items: center;
     counter-reset: li;
-  }
-
-  div ol li::before {
-    list-style: none;
-    content: counter(li);
-    color: white;
-    background-color: #8d5ad7;
-    position: absolute;
-    left: 30px;
-    height: 25px;
-    width: 25px;
-    padding: 5px;
-    border-radius: 50px;
-    counter-increment: li;
   }
 
   div ol li {
