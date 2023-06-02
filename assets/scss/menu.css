@@ -36,6 +36,11 @@ main input[value] {
 main h1 {
   font-style: italic;
   font-weight: bold;
+  text-align: center;
+}
+
+main {
+  text-align: center;
 }
 
 div.menu_item p {
@@ -177,11 +182,11 @@ i.fa-regular:hover::before, i.fa-regular:active {
 
 i.fa-regular {
   position: absolute;
-  font-size: 1.5em;
+  width: 21px;
+  height: 22px;
   cursor: pointer;
   font-weight: 100;
   top: 70px;
-  left: 400px;
 }
 
 input#order {
@@ -276,8 +281,29 @@ input#order {
     transition: 1s ease-in;
   }
   .fa-heart {
-    left: 330px;
+    left: 560px;
     top: 50px;
+  }
+  footer img {
+    margin-bottom: 20px;
+    height: 20px;
+    margin-right: 20px;
+  }
+  footer {
+    background-color: #353535;
+    color: white;
+    height: 114px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+  footer ul, footer ul li {
+    display: flex;
+  }
+  footer ul {
+    gap: 20px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 992px) {
