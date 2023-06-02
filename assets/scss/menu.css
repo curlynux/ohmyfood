@@ -333,6 +333,9 @@ input#order {
   footer * {
     display: flex;
   }
+  footer ul {
+    gap: 7px;
+  }
   footer img {
     filter: invert(100%);
     width: 10%;
