@@ -43,7 +43,7 @@ header
   height: 100px;
   width: 100px;
   border: 15px solid black;
-  border-top: 15px solid crimson;
+  border-top: 15px solid rgb(141, 90, 215);
   position:absolute;
   border-radius: 100%;
   top: 50%;
@@ -498,8 +498,10 @@ figure span
     margin-bottom: 3%;
   }
   
-  footer i
-  {
-    margin-right: 5%;
-  }
+  
 }
+
+footer .fa
+  {
+    margin-right: 10px;
+  }

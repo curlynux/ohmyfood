@@ -39,10 +39,6 @@ main h1 {
   text-align: center;
 }
 
-main {
-  text-align: center;
-}
-
 div.menu_item p {
   text-overflow: ellipsis;
   overflow: hidden;
