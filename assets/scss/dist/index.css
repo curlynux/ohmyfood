@@ -11,7 +11,7 @@ div ol li::before {
   color: white;
   background-color: #8d5ad7;
   position: absolute;
-  left: 30px;
+  left: 70px;
   height: 25px;
   width: 25px;
   padding: 5px;
@@ -137,6 +137,10 @@ figure span {
     margin-right: 2%;
   }
 
+  footer ul {
+    flex-direction: row;
+  }
+
   div.explore {
     background: #f4f4f4;
     text-align: center;
@@ -183,16 +187,12 @@ figure span {
     margin-top: 2%;
   }
 
-  div ol li:nth-child(1)::before {
-    left: 135px;
-  }
-
   div ol li:nth-child(2)::before {
-    left: 565px;
+    left: 560px;
   }
 
   div ol li:nth-child(3)::before {
-    left: 1000px;
+    left: 300px;
   }
 
   div ol li {
@@ -422,10 +422,15 @@ figure span {
     margin-bottom: 5%;
   }
 
-  footer p {
-    margin-bottom: 3%;
+  footer ul {
+    flex-direction: column;
   }
 }
+footer ul {
+  display: flex;
+  gap: 15px;
+}
+
 footer .fa {
   margin-right: 10px;
 }
