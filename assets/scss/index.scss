@@ -7,20 +7,7 @@
   flex-direction: column;
 }
 
-div ol li::before
-  {
-    list-style: none;
-    content: counter(li);
-    color: white;
-    background-color: rgb(141, 90, 215);
-    position: absolute;
-    left: 70px;
-    height: 25px;
-    width: 25px;
-    padding: 5px;
-    border-radius:50px;
-    counter-increment: li;
-  }
+
 
 .wrapper
 {
@@ -131,6 +118,58 @@ figure span
   left: 245px;
 }
 
+div.fonction {
+  position: relative;
+  display: flex;
+  height: 228.38px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 95%;
+  
+}
+
+div.fonction ol {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 20px;
+  counter-reset: list-counter;
+  padding-left: 2rem;
+}
+
+div.fonction ol li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 72.38px;
+  width: 322.49px;
+  justify-content: center;
+  align-items: center;
+  counter-increment: list-counter;
+  margin-bottom: 1rem;
+  
+}
+
+div.fonction ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  font-size: 1.2rem;
+}
+
+div.fonction ol li i {
+  margin-right: 10px;
+}
+
 @media only screen and (min-width: 768px)
 {
   header img
@@ -199,43 +238,22 @@ figure span
   
   /* ======== ORDERED LIST ======== */
   
-  div ol
-  {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    counter-reset: li;
-    flex-wrap: nowrap;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 2%;
-  }
   
-  div ol li:nth-child(1)::before
-  {
-    // left: 135px;
-  }
+
+  //   div ol li:nth-child(1)::before
+  // {
+  //   left: 300px;
+  // }
   
-  div ol li:nth-child(2)::before
-  {
-    left: 560px;
-  }
+  // div ol li:nth-child(2)::before
+  // {
+  //   left: 660px;
+  // }
   
-  div ol li:nth-child(3)::before
-  {
-    left: 300px;
-  }
-  
-  div ol li
-  {
-    align-items: center;
-    border-radius: 20px;
-    background: rgb(244, 244, 244);
-    width: 20%;
-    padding: 1%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
+  // div ol li:nth-child(3)::before
+  // {
+  //   left: 400px;
+  // }
   
   div ol li:nth-last-child(1)
   {
@@ -361,6 +379,7 @@ figure span
     text-align: center;
     padding: 10%;
     padding-bottom: 15%;
+    width: 100%;
   }
   
   div.explore h1
@@ -378,12 +397,16 @@ figure span
   
   div.explore input
   {
-    background: linear-gradient(rgb(206, 114, 214), rgb(141, 90, 215));
     padding: 6%;
-    border-radius: 50px;
     width: max-content;
     margin-left: 15%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+/* Shadow/Button */
+
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+// transform: matrix(1, 0, 0, -1, 0, 0);
   }
   
   div.explore input[value]
@@ -403,26 +426,7 @@ figure span
   
   
   
-  div ol li
-  {
-    margin: 5%;
-    align-items: center;
-    border-radius: 20px;
-    background: rgb(244, 244, 244);
-    width: 80%;
-    padding: 7%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
   
-  div ol li:nth-last-child(1)
-  {
-    background-color: rgb(242, 236, 254);
-  }
-  
-  div ol li i
-  {
-    margin-right: 5%;
-  }
   
   /* ======== RESTAURANTS ========= */
   
@@ -516,3 +520,42 @@ footer .fa
   {
     margin-right: 10px;
   }
+
+  @media only screen and (min-width: 768px)and (max-width: 992px)
+  {
+   
+    div ol li:nth-child(1)::before
+  {
+    left: 75px;
+  }
+  
+  div ol li:nth-child(2)::before
+  {
+    left: 310px;
+  }
+  
+  div ol li:nth-child(3)::before
+  {
+    left: 560px;
+  }
+
+  }
+
+  @media only screen
+and (min-width: 992px)
+{
+  div ol li:nth-child(1)::before
+  {
+    left: 135px;
+  }
+  
+  div ol li:nth-child(2)::before
+  {
+    left: 560px;
+  }
+  
+  div ol li:nth-child(3)::before
+  {
+    left: 1000px;
+  }
+}
