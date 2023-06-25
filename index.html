@@ -13,7 +13,7 @@
 <body>
 <div class="wrapper">
     <div id="loader"></div>
-    <header class="sh" style="display: none;">
+    <header class="load">
         <img src="./assets/images/logo/ohmyfood.png" alt="ohmyfood">
         <p id="localisation"><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>
         <div class="explore">
@@ -22,18 +22,18 @@
             <input type="button" value="Explorer nos restaurants"/>
         </div>
     </header>
-    <main class="sh" style="display: none;">
+    <main class="load" >
         <div class="fonction">
             <h3 style="font-weight: bold;">Fonctionnement</h3>
             <ol>
-                <li><i class="fa fa-phone"></i> Choisissez un restaurant</li>
-                <li><i class="fa fa-list"></i> Composez votre menu</li>
-                <li><i class="fa fa-store"></i> Dégustez au restaurant</li>
+                <li><span>1</span><i class="fa fa-phone"></i> Choisissez un restaurant</li>
+                <li><span>2</span><i class="fa fa-list"></i> Composez votre menu</li>
+                <li><span>3</span><i class="fa fa-store"></i> Dégustez au restaurant</li>
             </ol>
         </div>
         <div class="resto">
             <h2>Restaurants</h2>
-            <div class="r">
+            <div class="others">
                 <!-- <figure>
                     <span>Nouveau</span>
                     <span>Nouveau</span>
@@ -104,7 +104,7 @@
         </div>
     </main>
 </div>
-<footer class="sh" style="display: none;">
+<footer class="load">
     <img src="./assets/images/logo/ohmyfood.png" alt="logo">
     <ul>
         <li><i class="fa fa-utensils"></i> Proposer un restaurant</li>
@@ -113,18 +113,6 @@
         <li><a href="mailto:contact@ohmtfood.fr">Contact</a></li>
     </ul>
 </footer>
-<script>
-    let timeout = () => setTimeout(display, 00);
-    let display = () => 
-    {
-        document.getElementsByClassName("sh")[0].style.display = "flex";
-        document.getElementsByClassName("sh")[1].style.display = "flex";
-        document.getElementsByClassName("sh")[2].style.display = "flex";
-        document.getElementById("loader").style.display = "block";
-        setTimeout(() => document.getElementById("loader").style.display = "none", 3000)
 
-    }
-    timeout();
-</script>
 </body>
 </html>
