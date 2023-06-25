@@ -192,9 +192,6 @@ main {
   #localisation i {
     margin-right: 2%;
   }
-  footer ul {
-    flex-direction: row;
-  }
   div.explore {
     background: rgb(244, 244, 244);
     text-align: center;
@@ -303,6 +300,8 @@ main {
     gap: 7px;
     width: 661px;
     display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
   }
   footer ul li {
     display: flex;
@@ -314,6 +313,7 @@ main {
     width: 10%;
     height: 30px;
     margin-right: 40px;
+    margin-bottom: 30px;
   }
 }
 @media only screen and (max-width: 767px) {

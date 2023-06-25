@@ -244,10 +244,6 @@ main {
     margin-right: 2%;
   }
   
-  footer ul {
-  flex-direction: row;
-
-  }
   div.explore
   {
     background: rgb(244, 244, 244);
@@ -411,6 +407,9 @@ main {
         gap: 7px;
         width: 661px;
         display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+
     }
 
     footer ul li {
@@ -425,6 +424,7 @@ main {
         width: 10%;
         height: 30px;
         margin-right: 40px;
+        margin-bottom: 30px;
     }
 }
 
