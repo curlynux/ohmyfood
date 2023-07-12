@@ -53,22 +53,20 @@ div.menu_item p
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+
+    &:nth-child(2) {
+        font-size: 0.9em;
+    }
+
+    &:nth-child(3) {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-weight: bold;
+        animation: slidetxtout 2s cubic-bezier(0, .71, .27, 1);
+    }
 }
 
-div.menu_item p:nth-child(2)
-{
-    margin-left: 4%;
-    font-size: 0.9em;
-}
-
-div.menu_item p:nth-child(3)
-{
-    position: absolute;
-    bottom: 15px;
-    right: 5px;
-    font-weight: bold;
-    animation: slidetxtout 2s cubic-bezier(0,.71,.27,1);
-}
 
 div.menu_item:hover > p:nth-child(3)
 {
@@ -78,9 +76,7 @@ div.menu_item:hover > p:nth-child(3)
 div.menu_item p:nth-child(1)
 {
     font-weight: bold;
-    margin-top: 2%;
-    margin-left: 4%;
-    margin-bottom: 2%;
+    
 }
 
 div.menu_item span
@@ -144,7 +140,6 @@ h4::after
     top: 30px;
     height: 3px;
     width: 60px;
-    background: crimson;
     border-bottom: 5px solid;
     border-color: rgb(176, 225, 207);
 }
@@ -182,9 +177,14 @@ main section div.menu_item
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    justify-content:space-around;
+    flex-direction: column;
+    p {
+        margin-left: 10px;
+    }
 }
-
-
 
 div.menu_item:hover p:nth-child(1),
 div.menu_item:hover p:nth-child(2)
@@ -206,13 +206,9 @@ i.fa-regular:hover::before, i.fa-regular:active
 
 i.fa-regular
 {
-    position: sticky;
     cursor: pointer;
-    width: 22px;
-    height: 21px;
-    top: 70px;
-    left: calc(65% + 10px);
-    transform: translate(-50%, -50%);
+    margin-left: 20px;
+
 }
 
 input#order
@@ -261,11 +257,7 @@ input#order
         margin-bottom: 20px;
     }
 
-    i.fa-regular
-    {
-        left:40vh;
-        top: 5vh;
-    }
+
 
     main section div.menu_item
     {
@@ -291,14 +283,30 @@ input#order
         justify-content: space-evenly;
         flex-direction: column;
         padding-left: 10%;
-        height: 200px;
+        padding-bottom: 20px;
     }
       
     footer img
     {
         filter: invert(100%);
         width: 50%;
+        padding: 30px 0;
     }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    footer ul li {
+        display: flex;
+    }
+
+    footer ul li i {
+        margin-right: 10px;
+    }
+
 }
 
 // ******************* TABLET ************ //

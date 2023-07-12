@@ -7,7 +7,35 @@
   flex-direction: column;
 }
 
+div.centerContainer {
+  display: flex;
+  border: 5px solid black;
+  height: 100vh;
+  width: 181vh;
+  position: absolute;
+  justify-content: space-between;
+  flex-direction: row;
 
+}
+
+div.inside1, div.inside2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+div.inside1 div.top-left, div.inside1 div.top-right {
+  border: #008766 3px solid;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+div.inside2 div.bottom-left, div.inside2 div.bottom-right {
+  border: red 3px solid;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 
 .wrapper
 {
@@ -15,7 +43,7 @@
   margin: 0 auto;
 }
 
-header, div.fonction, div.explore
+header, div.fonctionnementnement, div.explore
 {
   display: flex;
 }
@@ -122,12 +150,12 @@ figure span
   top: 10px;
   position: absolute;
   z-index: 1;
-  left: 245px;
+  left: 65%;
   color: #008766;
   font-weight: bold;
 }
 
-div.fonction {
+div.fonctionnement {
   position: relative;
   display: flex;
   height: 228.38px;
@@ -138,7 +166,7 @@ div.fonction {
   
 }
 
-div.fonction ol {
+div.fonctionnement ol {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -146,7 +174,7 @@ div.fonction ol {
   justify-content: space-evenly;
 }
 
-div.fonction ol li {
+div.fonctionnement ol li {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -161,32 +189,20 @@ div.fonction ol li {
   
 }
 
-// div.fonction ol li::before {
-//   position: absolute;
-//   left: -1.5rem;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   background: #9356DC;
-//   width: 24px;
-//   height: 24px;
-//   border-radius: 100%;
-//   font-size: 1.2rem;
-// }
-
-div.fonction ol li span {
+div.fonctionnement ol li span {
   background: #9356DC;
-  width: 24px;
-  height: 24px;
+  width: 27px;
+  height: 27px;
   border-radius: 100%;
   font-size: 1.2rem;
   color: #FFFF;
   text-align: center;
   position: absolute;
-  left: 0;
+  left: 10px;
   transform: translate(-90%, 0%);
 }
 
-div.fonction ol li i {
+div.fonctionnement ol li i {
   margin-right: 10px;
 }
 
@@ -197,7 +213,6 @@ main {
 }
 
 #loader {
-  height: 100px;
   width: 100px;
   border: 15px solid black;
   border-top: 15px solid rgb(141, 90, 215);
@@ -207,6 +222,7 @@ main {
   left: 50%;
   z-index: 1;
   animation: spin 1s linear infinite, fadeOut 3s forwards;
+  height: 100px;
 }
 
 @keyframes fadeOut {
@@ -222,11 +238,12 @@ main {
 
 @media only screen and (min-width: 768px)
 {
+  
   header img
   {
     width: 20%;
     padding-top: 48px;
-  padding-bottom: 48px;
+    padding-bottom: 48px;
   }
   
   #localisation
@@ -331,6 +348,11 @@ main {
     align-self: center;
   }
   
+div.fonctionnement h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
   div.resto h2
   {
     font-weight: bold;
@@ -430,6 +452,15 @@ main {
 
 @media only screen and (max-width: 767px)
 {
+
+  html, body, header, main {
+    width: max-content;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
   header img
   {
     width: 50%;
@@ -450,6 +481,8 @@ main {
   {
     margin-right: 5%;
   }
+
+  
   
   div.explore
   {
@@ -494,18 +527,25 @@ border-radius: 25px;
   
   /* ======== ORDERED LIST ======== */
   
-  div ol
+  div.fonctionnement ol
   {
     display: flex;
     text-align: center;
     align-items: center;
     counter-reset: li;
+    flex-direction: column;
   }
   
-  
-  div.fonction ol  {
-flex-direction: column;
+  div.fonctionnement {
+    height: 440px;
   }
+
+  div.fonctionnement h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.13px;
+  }
+ 
   
   
   /* ======== RESTAURANTS ========= */
@@ -529,12 +569,19 @@ flex-direction: column;
   
   figure
   {
-    height: 200px;
+    height: 251px;
+    width: 340px;
     overflow: hidden;
     display: flex;
     margin-bottom: 10%;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  figure img {
+    width: 346px;
+    height: 231px;
+    object-fit: cover;
   }
   
   #palette
@@ -547,7 +594,7 @@ flex-direction: column;
   {
     width: 100%;
     padding: 5%;
-    top: 67%;
+    top: 70%;
     position: absolute;
     background: white;
   }
@@ -563,26 +610,40 @@ flex-direction: column;
     position: absolute;
     font-size: 1.5em;
     bottom: 35px;
-    left: 260px;
+    left: 83%;
   }
   
   footer
   {
     display: flex;
     background: rgb(56, 56, 56);
-    padding: 5%;
     color: white;
+    height: 186px;
+    padding-top: 4.4%;
+    padding-left: 2.5%;
+    padding-bottom: 4.4%;
+    padding-right: 2.5%;
+    width: 100%;
   }
   
   footer img
   {
     filter: invert(100%);
-    width: 50%;
+    width: 20%;
     margin-bottom: 5%; 
+    display: flex;
   }
   
   footer ul {
+    display: flex;
+    color: #FFFF;
     flex-direction: column;
+    gap: 7px;
+  }
+
+  footer ul li {
+    display: flex;
+    flex-direction: row;
   }
 
   
@@ -597,3 +658,4 @@ footer .fa
   {
     margin-right: 10px;
   }
+

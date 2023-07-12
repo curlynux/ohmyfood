@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/scss/reset.css">
-    <link rel="stylesheet" href="./assets/scss/normalize.css">
-    <link rel="stylesheet" href="./assets/scss/index.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Document</title>
+    <title>ohmyfood</title>
 </head>
 <body>
+<div class="centerContainer">
+    <div class="inside1">
+        <div class="top-left"></div>
+        <div class="top-right"></div>
+    </div>
+    <div class="inside2">
+        <div class="bottom-left"></div>
+        <div class="bottom-right"></div>
+    </div>
+</div>
 <div class="wrapper">
     <div id="loader"></div>
     <header class="load">
@@ -23,8 +33,8 @@
         </div>
     </header>
     <main class="load" >
-        <div class="fonction">
-            <h3 style="font-weight: bold;">Fonctionnement</h3>
+        <div class="fonctionnement">
+            <h2>Fonctionnement</h2>
             <ol>
                 <li><span>1</span><i class="fa fa-phone"></i> Choisissez un restaurant</li>
                 <li><span>2</span><i class="fa fa-list"></i> Composez votre menu</li>
@@ -115,4 +125,24 @@
 </footer>
 
 </body>
+<script>
+    // Get the reference to the div element
+const div = document.getElementById('loader');
+
+// Calculate the position of the div relative to the viewport
+const divRect = div.getBoundingClientRect();
+const divCenterX = divRect.left + divRect.width / 2;
+const divCenterY = divRect.top + divRect.height / 2;
+
+// Calculate the dimensions of the viewport
+const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+// Check if the div is in the center of the screen
+const isCentered = Math.abs(divCenterX - viewportWidth / 2) < 1 && Math.abs(divCenterY - viewportHeight / 2) < 1;
+
+// Output the result
+console.log("Is the div centered?", isCentered);
+
+</script>
 </html>

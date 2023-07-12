@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 
-header, div.fonction, div.explore {
+header, div.fonctionnementnement, div.explore {
   display: flex;
 }
 
@@ -99,7 +99,7 @@ figure span {
   font-weight: bold;
 }
 
-div.fonction {
+div.fonctionnement {
   position: relative;
   display: flex;
   height: 228.38px;
@@ -108,7 +108,7 @@ div.fonction {
   width: 95%;
 }
 
-div.fonction ol {
+div.fonctionnement ol {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -116,7 +116,7 @@ div.fonction ol {
   justify-content: space-evenly;
 }
 
-div.fonction ol li {
+div.fonctionnement ol li {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -130,7 +130,7 @@ div.fonction ol li {
   margin-bottom: 1rem;
 }
 
-div.fonction ol li span {
+div.fonctionnement ol li span {
   background: #9356DC;
   width: 24px;
   height: 24px;
@@ -143,7 +143,7 @@ div.fonction ol li span {
   transform: translate(-90%, 0%);
 }
 
-div.fonction ol li i {
+div.fonctionnement ol li i {
   margin-right: 10px;
 }
 
@@ -368,7 +368,7 @@ main {
     align-items: center;
     counter-reset: li;
   }
-  div.fonction ol {
+  div.fonctionnementnement ol {
     flex-direction: column;
   }
   /* ======== RESTAURANTS ========= */
