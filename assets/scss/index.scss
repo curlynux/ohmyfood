@@ -218,12 +218,15 @@ main {
   border-top: 15px solid rgb(141, 90, 215);
   position: absolute;
   border-radius: 100%;
-  top: 50%;
-  left: 50%;
+
+  top: 44%;
+  left: 46%;
   z-index: 1;
-  animation: spin 1s linear infinite, fadeOut 3s forwards;
+  animation: spin 1s linear infinite;
   height: 100px;
+  
 }
+
 
 @keyframes fadeOut {
   0% {
