@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
+@font-face {
+    font-family: 'Shrikihand'; /* Use the exact name of the font */
+    src: url('../font/Shrikhand/Shrikhand-Regular.ttf') format('truetype'); /* Replace with the correct font file path and format */
+  }
+  
+
 *
 {
     font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Shrikihand";
 }
 
 $main_color: rgb(246, 246, 246);
@@ -215,7 +226,9 @@ input#order
 {
     background: linear-gradient(rgb(206, 114, 214), rgb(141, 90, 215));
     border-radius: 50px;
-    width: max-content;
+    width: 186px;
+    text-align: center;
+    justify-content: center;
     display: flex;
     padding: 1.5%;
     color: #FFFF;
