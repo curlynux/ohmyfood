@@ -36,6 +36,19 @@ header:not(:empty), main:not(:empty) {
   display: flex;
 }
 
+#loader {
+  height: 100px;
+  width: 100px;
+  border: 15px solid black;
+  border-top: 15px solid #8d5ad7;
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  left: 35%;
+  z-index: 1;
+  animation: spin 1s linear infinite;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -172,7 +185,7 @@ main {
   top: 44%;
   left: 46%;
   z-index: 1;
-  animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite, fadeOut 2s 3s forwards;
   height: 100px;
 }
 
