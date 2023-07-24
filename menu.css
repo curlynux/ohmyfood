@@ -5,7 +5,22 @@
   font-family: "Shrikihand"; /* Use the exact name of the font */
   src: url("../font/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); /* Replace with the correct font file path and format */
 }
+@font-face {
+  font-family: "Shrikihand"; /* Use the exact name of the font */
+  src: url("./assets/font/Shrikhand/Shrikhand-Regular.ttf") format("truetype"); /* Replace with the correct font file path and format */
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/font/Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+}
 * {
+  font-family: "Raleway", sans-serif;
+  flex-direction: column;
+  font: normal;
+  text-decoration: none;
+}
+
+p, span, strong, input, button, li {
   font-family: "Raleway", sans-serif;
 }
 
@@ -35,6 +50,9 @@ main input {
   padding: 1.5%;
   align-self: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border: 0px;
+  justify-content: center;
+  text-align: center;
 }
 
 main input[value] {
@@ -204,6 +222,7 @@ input#order {
   bottom: 25px;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border: 0px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -370,6 +389,7 @@ input#order {
   }
   footer ul {
     gap: 7px;
+    flex-direction: row;
   }
   footer img {
     filter: invert(100%);
